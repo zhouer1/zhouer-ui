@@ -7,7 +7,9 @@ title: 基础使用
 </docs>
 
 <script setup lang="ts">
+import { test } from '@zhouer-ui/utils'
 
+test()
 </script>
 
 <template>

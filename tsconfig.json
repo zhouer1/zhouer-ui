@@ -4,10 +4,17 @@
     "jsx": "preserve",
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "useDefineForClassFields": true,
+    "baseUrl": ".",
     "module": "ESNext",
 
     /* Bundler mode */
     "moduleResolution": "bundler",
+    "paths": {
+      "@zhouer-ui/utils": [
+        "packages/utils/src"
+      ]
+    },
+
     "resolveJsonModule": true,
     "allowImportingTsExtensions": true,
 
@@ -15,7 +22,8 @@
 
     "strict": true,
     "noFallthroughCasesInSwitch": true,
-    "noUnusedLocals": true,
+    // 定义变量却没有使用时不报错
+    "noUnusedLocals": false,
     "noUnusedParameters": true,
     "noEmit": true,
     "isolatedModules": true,

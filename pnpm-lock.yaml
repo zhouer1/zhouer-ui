@@ -94,7 +94,11 @@ importers:
         specifier: ^2.5.1
         version: 2.5.1
 
-  packages/zhouer-ui: {}
+  packages/zhouer-ui:
+    dependencies:
+      '@zhouer-ui/utils':
+        specifier: workspace:*
+        version: link:../utils
 
 packages:
 

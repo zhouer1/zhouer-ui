@@ -12,22 +12,34 @@
     "paths": {
       "@zhouer-ui/utils": [
         "packages/utils/src"
+      ],
+      "zhouer-ui": [
+        "packages/zhouer-ui/src"
+      ],
+      "zhouer-ui/*": [
+        "packages/zhouer-ui/src/*"
       ]
     },
 
     "resolveJsonModule": true,
+    "types": [
+      "vitest/globals"
+    ],
+    "allowArbitraryExtensions": true,
     "allowImportingTsExtensions": true,
 
     /* Linting */
 
     "strict": true,
     "noFallthroughCasesInSwitch": true,
-    // 定义变量却没有使用时不报错
-    "noUnusedLocals": false,
+    "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noEmit": true,
     "isolatedModules": true,
     "skipLibCheck": true
   },
-  "references": [{ "path": "./tsconfig.node.json" }]
+  "references": [
+    { "path": "./tsconfig.node.json" },
+    { "path": "./tsconfig.vitepress.json" }
+  ]
 }

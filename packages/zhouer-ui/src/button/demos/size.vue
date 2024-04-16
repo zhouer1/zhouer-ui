@@ -1,9 +1,8 @@
 <docs>
 ---
-title: 基础使用
+title: size
 ---
-
-这是一个`button`基础使用的例子
+`button`有`default`,`large`,`small`三种size
 </docs>
 
 <script setup lang="ts">
@@ -17,15 +16,15 @@ function handleClick() {
     <z-button @click="handleClick">
       普通按钮
     </z-button>
-    <z-button type="dashed" @click="handleClick">
-      虚线按钮
+    <z-button size="large" @click="handleClick">
+      大按钮
     </z-button>
-    <z-button type="primary" @click="handleClick">
-      主题按钮
+    <z-button size="small" @click="handleClick">
+      小按钮
     </z-button>
   </div>
 </template>
 
-<style scoped>
+    <style scoped>
 
-</style>
+    </style>

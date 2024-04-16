@@ -4,11 +4,12 @@ import { computed } from 'vue'
 // 要求传入类名的同时以这种格式传递类名的BEM类型信息
 type BEMType = string | [string, 'B' | 'E' | 'M' | undefined]
 export function useClassnames(componentName: string) {
-  const prefix = 'zhouer'
+  // z-button
+  const prefix = 'z'
   const className = `${prefix}-${componentName}`
   const c = (...arg: BEMType[]) => {
     // zhouer-a-b-c   c('a', 'b', 'c)
-    if (arg.length > 1) {
+    if (arg.length) {
       return arg.reduce((pre, cur) => {
         if (Array.isArray(cur)) {
           const arg1 = cur[0]
@@ -21,7 +22,7 @@ export function useClassnames(componentName: string) {
             return `${pre}--${arg1}`
         }
         return `${pre}-${cur}`
-      }, className)
+      }, className) as string
     }
 
     return className
@@ -37,5 +38,7 @@ export function useClassnames(componentName: string) {
   return {
     c,
     cx,
+    cm,
+    ce,
   }
 }

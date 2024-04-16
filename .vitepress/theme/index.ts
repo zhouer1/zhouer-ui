@@ -5,6 +5,9 @@ import DefaultTheme from 'vitepress/theme'
 import './style.css'
 import { AntdTheme } from 'vite-plugin-vitepress-demo/theme'
 
+// import Zhouer from 'zhouer-ui'
+import 'zhouer-ui/styles.ts'
+
 export default {
   extends: DefaultTheme,
   Layout: () => {
@@ -14,5 +17,6 @@ export default {
   },
   enhanceApp({ app }) {
     app.component('Demo', AntdTheme)
+    // app.use(Zhouer)
   },
 } satisfies Theme

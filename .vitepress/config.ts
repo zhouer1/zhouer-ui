@@ -5,7 +5,9 @@ export default defineConfig({
   title: 'Zhouer UI',
   description: '测试组件库，用于个人学习',
   rewrites: {
+    // 解析文档的存放路径
     'docs/(.*)': '(.*)',
+    // 解析demo的存放路径
     'packages/zhouer-ui/src/:comp/(.*)': 'components/:comp/(.*)',
   },
   themeConfig: {

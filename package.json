@@ -6,7 +6,9 @@
     "docs:dev": "vitepress dev",
     "docs:build": "vitepress build",
     "docs:preview": "vitepress preview",
-    "createcolor": "esno ./scripts/gen-colors.ts"
+    "createcolor": "esno ./scripts/gen-colors.ts",
+    "test": "vitest",
+    "build:css": "esno ./scripts/css-bundle.ts"
   },
   "dependencies": {
     "vue": "^3.4.21"
@@ -14,17 +16,28 @@
   "devDependencies": {
     "@ant-design/colors": "^7.0.2",
     "@mistjs/eslint-config": "^1.0.0",
+    "@types/fs-extra": "^11.0.4",
+    "@types/less": "^3.0.6",
     "@types/node": "^20.12.7",
     "@vitejs/plugin-vue": "^5.0.4",
+    "@vitejs/plugin-vue-jsx": "^3.1.0",
+    "@vue/test-utils": "^2.4.5",
     "eslint": "8.55.0",
     "esno": "^4.7.0",
+    "fast-glob": "^3.3.2",
+    "fs-extra": "^11.2.0",
     "husky": "8.0.3",
+    "jsdom": "^24.0.0",
     "less": "^4.2.0",
     "lint-staged": "^15.2.2",
     "typescript": "^5.2.2",
+    "unplugin-vue-components": "^0.26.0",
     "vite": "^5.2.0",
+    "vite-plugin-dts": "^3.8.3",
+    "vite-plugin-tsx-resolve-types": "^0.0.2",
     "vite-plugin-vitepress-demo": "^2.2.1",
     "vitepress": "^1.1.0",
+    "vitest": "^1.5.0",
     "vue-tsc": "^2.0.6"
   },
   "lint-staged": {

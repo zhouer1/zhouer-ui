@@ -1,0 +1,85 @@
+@import "../../style/index.less";
+
+.z-button {
+    background: none;
+    cursor: pointer;
+    border: 1px solid var(--zhouer-color-border);
+    outline: none;
+    color: inherit;
+    padding: 4px 8px;
+    border-radius: 4px;
+    height: 32px;
+    font-size: 16px;
+    // 文字居中
+    display: inline-flex;
+    align-items: center;
+
+    &-size {
+        &--small {
+            height: 24px;
+            padding: 2px 4px;
+            font-size: 12px;
+        }
+        &--large {
+            height: 40px;
+            padding: 8px 16px;
+            font-size: 20px;
+        }
+    }
+
+    &:disabled {
+        color: var(--zhouer-color-text-disabled);
+        border-color: #d9d9d9;
+        background-color: #f0f0f0;
+        cursor: not-allowed;
+        pointer-events: none;
+    }
+
+    &--default {
+        border-color: var(--zhouer-color-border);
+        color: var(--zhouer-color-text);
+
+        &:hover {
+            border-color: var(--zhouer-color-primary-hover);
+            color: var(--zhouer-color-primary-hover);
+        }
+    
+        &:active {
+            border-color: var(--zhouer-color-primary-active);
+            color: var(--zhouer-color-primary-active);
+        }
+    }
+
+    
+    &--dashed {
+        border-style: dashed;
+        border-color: var(--zhouer-color-border);
+        color: var(--zhouer-color-text);
+
+        &:hover {
+            border-color: var(--zhouer-color-primary-hover);
+            color: var(--zhouer-color-primary-hover);
+        }
+    
+        &:active {
+            border-color: var(--zhouer-color-primary-active);
+            color: var(--zhouer-color-primary-active);
+        }
+    }
+
+    &--primary {
+        border-color: var(--zhouer-color-primary);
+        background-color: var(--zhouer-color-primary);
+        color: white;
+
+        &:hover {
+            border-color: var(--zhouer-color-primary-hover);
+            background-color: var(--zhouer-color-primary-hover);
+        }
+    
+        &:active {
+            border-color: var(--zhouer-color-primary-active);
+            background-color: var(--zhouer-color-primary-active);
+        }
+    }
+}
